@@ -19,7 +19,7 @@ def set_seed(seed):
 
 if __name__=='__main__':
     opt=config.parse_opt()
-    torch.cuda.set_device(opt.CUDA_DEVICE)
+    torch.cuda.set_device(0)
     set_seed(opt.SEED)
     
     
