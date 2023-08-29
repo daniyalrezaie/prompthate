@@ -24,7 +24,7 @@ if __name__=='__main__':
     
     
     # Create tokenizer
-    tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
+    tokenizer = RobertaTokenizer.from_pretrained('/content/prompthate/ourmodel')
 
     constructor='build_baseline'
     if opt.MODEL=='pbm':

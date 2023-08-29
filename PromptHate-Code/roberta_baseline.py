@@ -32,7 +32,7 @@ def build_baseline(opt):
     final_dim=2
     times=2-int(opt.UNIMODAL)
     text_encoder=RobertaForSequenceClassification.from_pretrained(
-        'roberta-large',
+        '/content/prompthate/ourmodel',
         num_labels=final_dim,
         output_attentions=False,
         output_hidden_states=True
