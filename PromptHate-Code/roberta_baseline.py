@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from transformers import RobertaForSequenceClassification
+from transformers import RobertaForSequenceClassification , AutoModelForSequenceClassification
 
 from classifier import SingleClassifier, SimpleClassifier
 from rela_encoder import Rela_Module 
@@ -31,7 +31,7 @@ class RobertaBaseModel(nn.Module):
 def build_baseline(opt):  
     final_dim=2
     times=2-int(opt.UNIMODAL)
-    text_encoder=RobertaForSequenceClassification.from_pretrained(
+    text_encoder=AutoModelForSequenceClassification.from_pretrained(
         '/content/prompthate/ourmodel',
         num_labels=final_dim,
         output_attentions=False,

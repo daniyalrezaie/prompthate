@@ -1,12 +1,12 @@
 import torch
 import torch.nn as nn
-from transformers import RobertaForMaskedLM
+from transformers import RobertaForMaskedLM , AutoModelForMaskedLM
 
 class RobertaPromptModel(nn.Module):
     def __init__(self,label_list):
         super(RobertaPromptModel, self).__init__()
         self.label_word_list=label_list
-        self.roberta = RobertaForMaskedLM.from_pretrained('/content/prompthate/ourmodel')
+        self.roberta = AutoModelForMaskedLM.from_pretrained('/content/prompthate/ourmodel')
 
     def forward(self,tokens,attention_mask,mask_pos,feat=None):
         batch_size = tokens.size(0)

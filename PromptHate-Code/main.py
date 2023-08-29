@@ -6,7 +6,7 @@ import config
 import os
 from train import train_for_epoch
 from torch.utils.data import DataLoader
-from transformers import RobertaTokenizer
+from transformers import RobertaTokenizer , AutoTokenizer
 
 def set_seed(seed):
     torch.manual_seed(seed)
@@ -24,7 +24,7 @@ if __name__=='__main__':
     
     
     # Create tokenizer
-    tokenizer = RobertaTokenizer.from_pretrained('/content/prompthate/ourmodel')
+    tokenizer = AutoTokenizer.from_pretrained('/content/prompthate/ourmodel')
 
     constructor='build_baseline'
     if opt.MODEL=='pbm':

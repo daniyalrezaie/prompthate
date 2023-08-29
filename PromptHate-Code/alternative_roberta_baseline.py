@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from transformers import RobertaModel
+from transformers import RobertaModel , AutoModel
 
 from classifier import SingleClassifier, SimpleClassifier
 from rela_encoder import Rela_Module 
@@ -39,7 +39,7 @@ def build_baseline(opt):
         output_hidden_states=True
     )
     """
-    text_encoder=RobertaModel.from_pretrained('/content/prompthate/ourmodel')
+    text_encoder=AutoModel.from_pretrained('/content/prompthate/ourmodel')
     attention=Rela_Module(opt.ROBERTA_DIM,
                           opt.ROBERTA_DIM,opt.NUM_HEAD,opt.MID_DIM,
                           opt.TRANS_LAYER,

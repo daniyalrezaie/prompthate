@@ -54,8 +54,8 @@ def train_for_epoch(opt,model,train_loader,test_loader):
             os.mkdir(model_path)
     #multi-qeury configuration
     if opt.MULTI_QUERY:
-        from transformers import RobertaTokenizer
-        tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
+        from transformers import AutoTokenizer
+        tokenizer = AutoTokenizer.from_pretrained('/content/prompthate/ourmodel')
     #initialization of logger
     log_path=os.path.join(opt.DATASET)
     if os.path.exists(log_path)==False:
