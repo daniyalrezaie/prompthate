@@ -24,7 +24,7 @@ if __name__=='__main__':
     
     
     # Create tokenizer
-    tokenizer = AutoTokenizer.from_pretrained('/content/prompthate/ourmodel')
+    tokenizer = AutoTokenizer.from_pretrained('Kidsshield/CBD-FullData')
 
     constructor='build_baseline'
     if opt.MODEL=='pbm':

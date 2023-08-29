@@ -32,7 +32,7 @@ def build_baseline(opt):
     final_dim=2
     times=2-int(opt.UNIMODAL)
     text_encoder=AutoModelForSequenceClassification.from_pretrained(
-        '/content/prompthate/ourmodel',
+        'Kidsshield/CBD-FullData',
         num_labels=final_dim,
         output_attentions=False,
         output_hidden_states=True

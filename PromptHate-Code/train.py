@@ -55,7 +55,7 @@ def train_for_epoch(opt,model,train_loader,test_loader):
     #multi-qeury configuration
     if opt.MULTI_QUERY:
         from transformers import AutoTokenizer
-        tokenizer = AutoTokenizer.from_pretrained('/content/prompthate/ourmodel')
+        tokenizer = AutoTokenizer.from_pretrained('Kidsshield/CBD-FullData')
     #initialization of logger
     log_path=os.path.join(opt.DATASET)
     if os.path.exists(log_path)==False:

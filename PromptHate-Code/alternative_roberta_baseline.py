@@ -39,7 +39,7 @@ def build_baseline(opt):
         output_hidden_states=True
     )
     """
-    text_encoder=AutoModel.from_pretrained('/content/prompthate/ourmodel')
+    text_encoder=AutoModel.from_pretrained('Kidsshield/CBD-FullData')
     attention=Rela_Module(opt.ROBERTA_DIM,
                           opt.ROBERTA_DIM,opt.NUM_HEAD,opt.MID_DIM,
                           opt.TRANS_LAYER,
