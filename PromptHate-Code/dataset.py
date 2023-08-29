@@ -105,7 +105,7 @@ class Multimodal_Data():
             #add space already
             assert len(tokenizer.tokenize(' ' + self.label_mapping_word[label])) == 1
             self.label_mapping_id[label] = \
-            tokenizer._convert_token_to_id(
+            tokenizer._convert_token_to_ids(
                 tokenizer.tokenize(' ' + self.label_mapping_word[label])[0])
             print ('Mapping for label %d, word %s, index %d' % 
                    (label,mapping_word,self.label_mapping_id[label]))
